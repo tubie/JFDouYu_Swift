@@ -48,10 +48,6 @@
 		E8468B1724EE9D6600E7105C = {
 			isa = PBXGroup;
 			children = (
-				E8468B7B24EF92A200E7105C /* Profile.storyboard */,
-				E8468B7824EF928500E7105C /* Follow.storyboard */,
-				E8468B7624EF920100E7105C /* Live.storyboard */,
-				E8468B7324EF91DE00E7105C /* Home.storyboard */,
 				E8468B2224EE9D6600E7105C /* JFDouYu_Swift */,
 				E8468B2124EE9D6600E7105C /* Products */,
 			);
@@ -74,7 +70,6 @@
 				E8468B2724EE9D6600E7105C /* ViewController.swift */,
 				E8468B2C24EE9D7000E7105C /* Assets.xcassets */,
 				E8468B2E24EE9D7000E7105C /* LaunchScreen.storyboard */,
-				E8468B2924EE9D6600E7105C /* Main.storyboard */,
 				E8468B3124EE9D7000E7105C /* Info.plist */,
 			);
 			path = JFDouYu_Swift;
@@ -106,6 +101,7 @@
 		E8468B4F24EEAD0800E7105C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E8468B7324EF91DE00E7105C /* Home.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -127,6 +123,7 @@
 		E8468B5224EEAD0800E7105C /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				E8468B7824EF928500E7105C /* Follow.storyboard */,
 				E8468B5324EEAD0800E7105C /* Controller */,
 				E8468B5424EEAD0800E7105C /* Model */,
 				E8468B5524EEAD0800E7105C /* View */,
@@ -158,6 +155,7 @@
 		E8468B5624EEAD0800E7105C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E8468B7B24EF92A200E7105C /* Profile.storyboard */,
 				E8468B5724EEAD0800E7105C /* Controller */,
 				E8468B5824EEAD0800E7105C /* Model */,
 				E8468B5924EEAD0800E7105C /* View */,
@@ -189,6 +187,7 @@
 		E8468B5A24EEAD0800E7105C /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				E8468B7624EF920100E7105C /* Live.storyboard */,
 				E8468B5B24EEAD0800E7105C /* Controller */,
 				E8468B5C24EEAD0800E7105C /* Model */,
 				E8468B5D24EEAD0800E7105C /* View */,
@@ -220,6 +219,7 @@
 		E8468B5E24EEAD0800E7105C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E8468B2924EE9D6600E7105C /* Main.storyboard */,
 				E8468B5F24EEAD0800E7105C /* Controller */,
 				E8468B6024EEAD0800E7105C /* Model */,
 				E8468B6124EEAD0800E7105C /* View */,
