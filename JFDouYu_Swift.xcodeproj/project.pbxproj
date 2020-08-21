@@ -13,6 +13,10 @@
 		E8468B2B24EE9D6600E7105C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8468B2924EE9D6600E7105C /* Main.storyboard */; };
 		E8468B2D24EE9D7000E7105C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8468B2C24EE9D7000E7105C /* Assets.xcassets */; };
 		E8468B3024EE9D7000E7105C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8468B2E24EE9D7000E7105C /* LaunchScreen.storyboard */; };
+		E8468B7524EF91DE00E7105C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8468B7324EF91DE00E7105C /* Home.storyboard */; };
+		E8468B7724EF920100E7105C /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8468B7624EF920100E7105C /* Live.storyboard */; };
+		E8468B7A24EF928500E7105C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8468B7824EF928500E7105C /* Follow.storyboard */; };
+		E8468B7C24EF92A200E7105C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8468B7B24EF92A200E7105C /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E8468B2C24EE9D7000E7105C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8468B2F24EE9D7000E7105C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8468B3124EE9D7000E7105C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8468B7424EF91DE00E7105C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = JFDouYu_Swift/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		E8468B7624EF920100E7105C /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		E8468B7924EF928500E7105C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = JFDouYu_Swift/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
+		E8468B7B24EF92A200E7105C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,10 @@
 		E8468B1724EE9D6600E7105C = {
 			isa = PBXGroup;
 			children = (
+				E8468B7B24EF92A200E7105C /* Profile.storyboard */,
+				E8468B7824EF928500E7105C /* Follow.storyboard */,
+				E8468B7624EF920100E7105C /* Live.storyboard */,
+				E8468B7324EF91DE00E7105C /* Home.storyboard */,
 				E8468B2224EE9D6600E7105C /* JFDouYu_Swift */,
 				E8468B2124EE9D6600E7105C /* Products */,
 			);
@@ -60,9 +72,9 @@
 				E8468B2324EE9D6600E7105C /* AppDelegate.swift */,
 				E8468B2524EE9D6600E7105C /* SceneDelegate.swift */,
 				E8468B2724EE9D6600E7105C /* ViewController.swift */,
-				E8468B2924EE9D6600E7105C /* Main.storyboard */,
 				E8468B2C24EE9D7000E7105C /* Assets.xcassets */,
 				E8468B2E24EE9D7000E7105C /* LaunchScreen.storyboard */,
+				E8468B2924EE9D6600E7105C /* Main.storyboard */,
 				E8468B3124EE9D7000E7105C /* Info.plist */,
 			);
 			path = JFDouYu_Swift;
@@ -312,6 +324,10 @@
 				E8468B3024EE9D7000E7105C /* LaunchScreen.storyboard in Resources */,
 				E8468B2D24EE9D7000E7105C /* Assets.xcassets in Resources */,
 				E8468B2B24EE9D6600E7105C /* Main.storyboard in Resources */,
+				E8468B7724EF920100E7105C /* Live.storyboard in Resources */,
+				E8468B7524EF91DE00E7105C /* Home.storyboard in Resources */,
+				E8468B7C24EF92A200E7105C /* Profile.storyboard in Resources */,
+				E8468B7A24EF928500E7105C /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +361,22 @@
 				E8468B2F24EE9D7000E7105C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E8468B7324EF91DE00E7105C /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8468B7424EF91DE00E7105C /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		E8468B7824EF928500E7105C /* Follow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8468B7924EF928500E7105C /* Base */,
+			);
+			name = Follow.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
