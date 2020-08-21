@@ -60,11 +60,11 @@
             </objects>
             <point key="canvasLocation" x="-2039" y="411"/>
         </scene>
-        <!--Item 1-->
+        <!--首页-->
         <scene sceneID="h2w-Xx-FDB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kgj-CJ-SWY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="AUm-X0-tXd"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="btn_home_normal" selectedImage="btn_home_selected" id="AUm-X0-tXd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dzY-aN-n2C">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="-281.15942028985512" y="-702.45535714285711"/>
         </scene>
-        <!--Item 2-->
+        <!--直播-->
         <scene sceneID="S1O-oK-kBh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fpA-EH-7h2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="UfX-TI-Vt1"/>
+                    <tabBarItem key="tabBarItem" title="直播" image="btn_column_normal" selectedImage="btn_column_selected" id="UfX-TI-Vt1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XyL-yz-t6G">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -118,7 +118,7 @@
         <scene sceneID="34x-Mq-mz6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CiE-TV-6qX" userLabel="Item 3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="obG-JY-yxa" userLabel="Item 3"/>
+                    <tabBarItem key="tabBarItem" title="关注" image="btn_live_normal" selectedImage="btn_live_selected" id="obG-JY-yxa" userLabel="Item 3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z7g-y8-9w7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -153,7 +153,7 @@
         <scene sceneID="hXw-5C-L6T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SHV-nU-XZR" userLabel="Item 4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="tYX-Zg-Tbs" userLabel="Item 3"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" selectedImage="btn_user_selected" id="tYX-Zg-Tbs" userLabel="Item 3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nqd-Md-YaP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -169,4 +169,14 @@
             <point key="canvasLocation" x="-307" y="1399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_column_normal" width="24" height="24"/>
+        <image name="btn_column_selected" width="24" height="24"/>
+        <image name="btn_home_normal" width="24" height="24"/>
+        <image name="btn_home_selected" width="24" height="24"/>
+        <image name="btn_live_normal" width="30" height="24"/>
+        <image name="btn_live_selected" width="30" height="24"/>
+        <image name="btn_user_normal" width="24" height="24"/>
+        <image name="btn_user_selected" width="24" height="24"/>
+    </resources>
 </document>
