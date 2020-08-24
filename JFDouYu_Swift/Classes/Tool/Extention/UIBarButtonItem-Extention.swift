@@ -52,6 +52,7 @@ extension UIBarButtonItem{
         }else{
             btn.frame = CGRect(origin: .zero, size:size)
         }
+        
         self.init(customView:btn)
     }
     
