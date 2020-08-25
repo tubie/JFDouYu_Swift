@@ -22,6 +22,7 @@
 		E8468B8224F262C700E7105C /* JFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8124F262C700E7105C /* JFPageTitleView.swift */; };
 		E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8324F262E200E7105C /* JFPageContentView.swift */; };
 		E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8524F3E80C00E7105C /* JFConst.swift */; };
+		E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E8468B8124F262C700E7105C /* JFPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFPageTitleView.swift; sourceTree = "<group>"; };
 		E8468B8324F262E200E7105C /* JFPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFPageContentView.swift; sourceTree = "<group>"; };
 		E8468B8524F3E80C00E7105C /* JFConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFConst.swift; sourceTree = "<group>"; };
+		E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				E8468B7F24EFA5E800E7105C /* UIBarButtonItem-Extention.swift */,
+				E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
+				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,

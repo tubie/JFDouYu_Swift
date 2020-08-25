@@ -20,17 +20,33 @@ class JFHomeViewController: UIViewController {
         return titleView
     }()
     
+    private lazy var pageContentView:JFPageContentView = { [weak self ] in
+        let contentViewFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight + KtitleViewH, width: kScreenWidth, height: kScreenHeight - kStatusBarHeight - kNavigationBarHeight - KtitleViewH)
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)), a: 1.0)
+            childVcs.append(vc)
+        }
+        let  contentView = JFPageContentView(frame: contentViewFrame, childVcs:childVcs, parentViewController: self)
+        return contentView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
         view.addSubview(pageTitleView)
-        // Do any additional setup after loading the view.
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.orange
     }
 }
 
 extension JFHomeViewController{
     private func setupUI(){
+        
+        automaticallyAdjustsScrollViewInsets = false
+
         setNavigationBar()
     }
     

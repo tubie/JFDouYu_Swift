@@ -13,6 +13,10 @@ private let KScrollLineH:CGFloat = 2
 class JFPageTitleView: UIView {
     
     private var titles:[String]
+
+    //懒加载一个数组
+    private lazy var titleLabels:[UILabel] = [UILabel]()
+    
     private lazy var scrollView:UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
@@ -22,7 +26,13 @@ class JFPageTitleView: UIView {
         return scrollView
     }()
     
-    init(frame: CGRect ,titles:[String]) {
+    private lazy var scrollLine:UIView = {
+        let scrollLine = UIView()
+        scrollLine.backgroundColor = UIColor.orange
+        return scrollLine
+    }()
+    
+    init(frame: CGRect, titles:[String]) {
         self.titles = titles
         super.init(frame: frame)
         setupUI()
@@ -35,14 +45,16 @@ class JFPageTitleView: UIView {
 
 extension JFPageTitleView{
     private func setupUI(){
+        scrollView.frame = bounds        
+        
         addSubview(scrollView)
-        scrollView.frame = bounds
         
         setupTitleLabel()
+        
+        setupBottomLineAndScrollLine()
     }
     
     private func setupTitleLabel(){
-        
         //swift没有隐式转化的  一个是CGFloat 类型 一个是 int类型不能直接 乘除
          let labelW:CGFloat = frame.width / CGFloat(titles.count)
          let labelH:CGFloat = frame.height - KScrollLineH
@@ -59,8 +71,23 @@ extension JFPageTitleView{
             
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
             scrollView.addSubview(label)
-            
+            titleLabels.append(label)
         }
+    }
+    
+    private func setupBottomLineAndScrollLine(){
+        let bottomLine = UIView()
+        let lineH:CGFloat = 0.5
+        bottomLine.backgroundColor = UIColor.darkGray
+        bottomLine.frame = CGRect(x: 0, y:frame.height - lineH, width: frame.width, height: lineH)
+        addSubview(bottomLine)
+        
+//        titleLabels.first 是可选类型 用 guard进行判断
+        guard let firstlabel  = titleLabels.first  else { return}
+        firstlabel.textColor = UIColor.orange
+        
+        scrollView.addSubview(scrollLine)
+        scrollLine.frame = CGRect(x: firstlabel.frame.origin.x, y: frame.height - KScrollLineH, width:firstlabel.frame.width, height: KScrollLineH)
     }
     
 }
