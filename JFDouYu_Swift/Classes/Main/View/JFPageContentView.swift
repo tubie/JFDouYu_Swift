@@ -12,10 +12,7 @@ private let KCcontentCellID = "KCcontentCellID"
 
 class JFPageContentView: UIView {
     
-    
-    
     private var childVcs:[UIViewController]
-    
     /*
      用weak修饰 是可选类型 用 “？”修饰
      'weak' variable should have optional type 'UIViewController?'

@@ -8,15 +8,24 @@
 
 import UIKit
 
+//标明只能被类遵守  （如果不写也可以被 结构体，枚举遵守 不建议）这样不能把代理属性定义为可选类型
+//定义一个协议
+protocol JFPageTitleViewDelegate : class {
+    //声明一个协议的方法
+    func JFPageTitleViewSelectAtIndex(titleView:JFPageTitleView,selectIndex index:Int)
+}
+
 private let KScrollLineH:CGFloat = 2
 
 class JFPageTitleView: UIView {
     
     private var titles:[String]
-
     //懒加载一个数组
     private lazy var titleLabels:[UILabel] = [UILabel]()
-    
+    private var currentIndex:Int = 0
+    //声明一个代理的属性
+    weak var delegate:JFPageTitleViewDelegate?
+     
     private lazy var scrollView:UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
@@ -72,6 +81,11 @@ extension JFPageTitleView{
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
             scrollView.addSubview(label)
             titleLabels.append(label)
+            
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.labelClick(tapGes:)))
+            label.addGestureRecognizer(tapGes)
+            
         }
     }
     
@@ -90,4 +104,33 @@ extension JFPageTitleView{
         scrollLine.frame = CGRect(x: firstlabel.frame.origin.x, y: frame.height - KScrollLineH, width:firstlabel.frame.width, height: KScrollLineH)
     }
     
+}
+
+extension JFPageTitleView {
+    // label点击
+    @objc private func labelClick(tapGes:UITapGestureRecognizer){
+        //当前的label
+        guard let currentLabel = tapGes.view as? UILabel else {return}
+        
+        if currentLabel.tag == currentIndex {return}
+
+        //old label
+        let oldLabel = titleLabels[currentIndex]
+        
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        //保存最新label的下标值
+        currentIndex = currentLabel.tag
+        
+        let scrollLineX = CGFloat(currentLabel.tag) * scrollLine.frame.size.width
+        UIView.animate(withDuration: 0.15) {
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        //通知代理
+        //代理必须是可选的 因为外部可以不遵守这个代理 所以是weak 修饰， "?"
+        delegate?.JFPageTitleViewSelectAtIndex(titleView: self, selectIndex: currentIndex)
+                
+    }
 }

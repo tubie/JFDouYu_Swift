@@ -13,10 +13,11 @@ private  let KtitleViewH:CGFloat = 40
 class JFHomeViewController: UIViewController {
     
     //懒加载
-    private lazy var pageTitleView:JFPageTitleView = {
+    private lazy var pageTitleView:JFPageTitleView = { [weak self] in
         let frame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight, width: kScreenWidth, height: KtitleViewH)
         let titles  = ["推荐","游戏","娱乐","趣玩"]
-        let titleView = JFPageTitleView(frame: frame, titles: titles)
+        let titleView:JFPageTitleView = JFPageTitleView(frame: frame, titles: titles)
+        titleView.delegate = self
         return titleView
     }()
     
@@ -38,15 +39,12 @@ class JFHomeViewController: UIViewController {
         
         view.addSubview(pageTitleView)
         view.addSubview(pageContentView)
-        pageContentView.backgroundColor = UIColor.orange
     }
 }
 
 extension JFHomeViewController{
     private func setupUI(){
-        
         automaticallyAdjustsScrollViewInsets = false
-
         setNavigationBar()
     }
     
@@ -59,5 +57,12 @@ extension JFHomeViewController{
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", higtImageName: "Image_scan_click", size: size)
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
 
+    }
+}
+
+//遵守协议
+extension JFHomeViewController:JFPageTitleViewDelegate{
+    func JFPageTitleViewSelectAtIndex(titleView: JFPageTitleView, selectIndex: Int) {
+        print(selectIndex)
     }
 }
