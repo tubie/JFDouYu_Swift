@@ -16,6 +16,10 @@ protocol JFPageTitleViewDelegate : class {
 }
 
 private let KScrollLineH:CGFloat = 2
+//定义元组常量
+private let KNormalColor : (CGFloat,CGFloat,CGFloat) = (85,85,85)
+private let KSelectColor : (CGFloat,CGFloat,CGFloat) = (255,128,0)
+
 
 class JFPageTitleView: UIView {
     
@@ -37,7 +41,7 @@ class JFPageTitleView: UIView {
     
     private lazy var scrollLine:UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orange
+        scrollLine.backgroundColor = UIColor(r: KSelectColor.0, g: KSelectColor.1, b: KSelectColor.2, a: 1)
         return scrollLine
     }()
     
@@ -74,7 +78,7 @@ extension JFPageTitleView{
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16)
-            label.textColor = UIColor.darkGray
+            label.textColor = UIColor(r: KNormalColor.0, g: KNormalColor.1, b: KNormalColor.2, a: 1)
             label.textAlignment = .center
             let labelX:CGFloat = labelW * CGFloat(index)
             
@@ -92,13 +96,13 @@ extension JFPageTitleView{
     private func setupBottomLineAndScrollLine(){
         let bottomLine = UIView()
         let lineH:CGFloat = 0.5
-        bottomLine.backgroundColor = UIColor.darkGray
+        bottomLine.backgroundColor = UIColor(r: KNormalColor.0, g: KNormalColor.1, b: KNormalColor.2, a: 1)
         bottomLine.frame = CGRect(x: 0, y:frame.height - lineH, width: frame.width, height: lineH)
         addSubview(bottomLine)
         
 //        titleLabels.first 是可选类型 用 guard进行判断
         guard let firstlabel  = titleLabels.first  else { return}
-        firstlabel.textColor = UIColor.orange
+        firstlabel.textColor = UIColor(r: KSelectColor.0, g: KSelectColor.1, b: KSelectColor.2, a: 1)
         
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstlabel.frame.origin.x, y: frame.height - KScrollLineH, width:firstlabel.frame.width, height: KScrollLineH)
@@ -117,8 +121,8 @@ extension JFPageTitleView {
         //old label
         let oldLabel = titleLabels[currentIndex]
         
-        currentLabel.textColor = UIColor.orange
-        oldLabel.textColor = UIColor.darkGray
+        currentLabel.textColor = UIColor(r: KSelectColor.0, g: KSelectColor.1, b: KSelectColor.2, a: 1)
+        oldLabel.textColor = UIColor(r: KNormalColor.0, g: KNormalColor.1, b: KNormalColor.2, a: 1)
         
         //保存最新label的下标值
         currentIndex = currentLabel.tag
@@ -149,6 +153,27 @@ extension JFPageTitleView{
         scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
         
         //颜色的渐变
+        //取出变化范围
+        let colorDelta =  (KSelectColor.0 - KNormalColor.0,
+                           KSelectColor.1 - KNormalColor.1,
+                           KSelectColor.2 - KNormalColor.2)
+        
+        
+        //sourceLabel 是右 高亮边灰色 色值有大变小的过程
+        sourceLabel.textColor = UIColor(r: KSelectColor.0 - colorDelta.0 * progress,
+                                        g: KSelectColor.1 - colorDelta.1 * progress,
+                                        b: KSelectColor.2 - colorDelta.2 * progress,
+                                        a: 1)
+        
+        //targartLabel 是右 高亮边灰色 色值有小变大的的过程
+        targartLabel.textColor = UIColor(r: KNormalColor.0 + colorDelta.0 * progress,
+        g: KNormalColor.1 + colorDelta.1 * progress,
+        b: KNormalColor.2 + colorDelta.2 * progress,
+        a: 1)
+        
+        //记录currentIndex
+        currentIndex = targartIndex
+        
         
     }
 }

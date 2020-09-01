@@ -28,6 +28,9 @@ class JFPageContentView: UIView {
      用weak修饰 是可选类型 用 “？”修饰
      'weak' variable should have optional type 'UIViewController?'
      */
+    
+    private var isForbidScrollDelegate:Bool = false
+    
     private weak var parentViewController:UIViewController?
     
     private lazy var collectionView:UICollectionView = { [weak self] in
@@ -109,10 +112,15 @@ extension JFPageContentView:UICollectionViewDataSource{
 extension JFPageContentView:UICollectionViewDelegate{
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScrollDelegate = false
+        
         startOffSetX =  scrollView.contentOffset.x
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if (isForbidScrollDelegate) {return}
         
         var progress:CGFloat = 0
         var sourceIndex:Int = 0
@@ -171,6 +179,10 @@ extension JFPageContentView:UICollectionViewDelegate{
 //对外暴露的方法
 extension JFPageContentView{
     func setCurrentIndex(currentIndex:Int) {
+        
+        //禁止执行scroll的代理
+        isForbidScrollDelegate = true
+        
         let offSetX = CGFloat(currentIndex) * collectionView.frame.width
         //设置collectionview的偏移量
         collectionView.setContentOffset(CGPoint(x: offSetX, y: 0), animated: false)
