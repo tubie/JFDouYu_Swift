@@ -30,6 +30,7 @@ class JFHomeViewController: UIViewController {
             childVcs.append(vc)
         }
         let  contentView = JFPageContentView(frame: contentViewFrame, childVcs:childVcs, parentViewController: self)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -60,9 +61,20 @@ extension JFHomeViewController{
     }
 }
 
-//遵守协议
+//遵守协议JFPageTitleViewDelegate
 extension JFHomeViewController:JFPageTitleViewDelegate{
     func JFPageTitleViewSelectAtIndex(titleView: JFPageTitleView, selectIndex: Int) {
         print(selectIndex)
+        pageContentView.setCurrentIndex(currentIndex: selectIndex)
     }
+}
+
+//遵守协议JFPageContentViewDelegate
+extension JFHomeViewController:JFPageContentViewDelegate{
+    func JFPageContentViewScrollWith(pageContentView: JFPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleViewWithProgress(progress: progress, sourceIndex: sourceIndex, targartIndex: targetIndex)
+        
+    }
+    
+    
 }

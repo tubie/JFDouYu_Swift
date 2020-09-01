@@ -10,9 +10,20 @@ import UIKit
 
 private let KCcontentCellID = "KCcontentCellID"
 
+//标明只能被类遵守  （如果不写也可以被 结构体，枚举遵守 不建议）这样不能把代理属性定义为可选类型
+//定义一个协议
+protocol JFPageContentViewDelegate : class {
+    //声明一个协议的方法
+    func JFPageContentViewScrollWith(pageContentView:JFPageContentView,progress:CGFloat, sourceIndex:Int,targetIndex:Int)
+}
+
 class JFPageContentView: UIView {
     
+    weak var delegate:JFPageContentViewDelegate?
+    
     private var childVcs:[UIViewController]
+    
+    private var startOffSetX:CGFloat = 0
     /*
      用weak修饰 是可选类型 用 “？”修饰
      'weak' variable should have optional type 'UIViewController?'
@@ -38,6 +49,7 @@ class JFPageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: KCcontentCellID)
         return collectionView
     }()
@@ -92,5 +104,75 @@ extension JFPageContentView:UICollectionViewDataSource{
         
     }
     
+}
+
+extension JFPageContentView:UICollectionViewDelegate{
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffSetX =  scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        var progress:CGFloat = 0
+        var sourceIndex:Int = 0
+        var targetIndex:Int = 0
+        
+        //判断左滑还是右滑
+        let currentOffSetX = scrollView.contentOffset.x
+        let scrollViewW  = scrollView.bounds.width
+        if startOffSetX > currentOffSetX { //左滑
+            //计算progress
+//            floor 取整
+            progress = currentOffSetX / scrollViewW - floor(currentOffSetX / scrollViewW)
+            
+            //计算当前的 sourceIndex
+            sourceIndex = Int(currentOffSetX / scrollViewW)
+            
+            //计算target
+            targetIndex = sourceIndex + 1
+            
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+            
+            //如果完全滑过去
+            if currentOffSetX - startOffSetX ==  scrollViewW{
+                progress = 1
+                targetIndex = sourceIndex
+            }
+            
+            
+        }else{ //右滑
+            progress = 1 - (currentOffSetX / scrollViewW - floor(currentOffSetX / scrollViewW))
+            
+            //计算target
+            targetIndex = Int(currentOffSetX / scrollViewW)
+            
+            //计算当前的 sourceIndex
+            sourceIndex = targetIndex + 1
+            
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+        }
+        
+        print("progress:\(progress) sourceIndex:\(sourceIndex) targetIndex:\(targetIndex) ")
+        
+        delegate?.JFPageContentViewScrollWith(pageContentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+
+        
+        
+    }
+}
+
+
+
+//对外暴露的方法
+extension JFPageContentView{
+    func setCurrentIndex(currentIndex:Int) {
+        let offSetX = CGFloat(currentIndex) * collectionView.frame.width
+        //设置collectionview的偏移量
+        collectionView.setContentOffset(CGPoint(x: offSetX, y: 0), animated: false)
+    }
 }

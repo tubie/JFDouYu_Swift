@@ -134,3 +134,21 @@ extension JFPageTitleView {
                 
     }
 }
+
+//对外暴露方法
+extension JFPageTitleView{
+    func setTitleViewWithProgress(progress:CGFloat,sourceIndex:Int,targartIndex:Int){
+        
+        //取出label
+        let sourceLabel = titleLabels[sourceIndex]
+        let targartLabel = titleLabels[targartIndex]
+        
+        //处理滑块的逻辑
+        let moveTotalX = targartLabel.frame.origin.x -  sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //颜色的渐变
+        
+    }
+}
