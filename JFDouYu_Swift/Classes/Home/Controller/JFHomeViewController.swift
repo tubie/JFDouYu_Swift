@@ -22,7 +22,7 @@ class JFHomeViewController: UIViewController {
     }()
     
     private lazy var pageContentView:JFPageContentView = { [weak self ] in
-        let contentViewFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight + KtitleViewH, width: kScreenWidth, height: kScreenHeight - kStatusBarHeight - kNavigationBarHeight - KtitleViewH)
+        let contentViewFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight + KtitleViewH, width: kScreenWidth, height: kScreenHeight - kStatusBarHeight - kNavigationBarHeight - KtitleViewH - kTabBarHeight)
         var childVcs = [UIViewController]()
         for _ in 0..<4 {
             let vc = UIViewController()

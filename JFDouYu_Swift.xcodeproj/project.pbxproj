@@ -23,6 +23,7 @@
 		E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8324F262E200E7105C /* JFPageContentView.swift */; };
 		E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8524F3E80C00E7105C /* JFConst.swift */; };
 		E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */; };
+		E8CF282E24FE8E38003AD89D /* JFHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF282D24FE8E38003AD89D /* JFHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E8468B8324F262E200E7105C /* JFPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFPageContentView.swift; sourceTree = "<group>"; };
 		E8468B8524F3E80C00E7105C /* JFConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFConst.swift; sourceTree = "<group>"; };
 		E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
+		E8CF282D24FE8E38003AD89D /* JFHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFHomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		E8468B4E24EEAD0800E7105C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E8CF282C24FE8E1C003AD89D /* ViewModel */,
 				E8468B4F24EEAD0800E7105C /* Controller */,
 				E8468B5024EEAD0800E7105C /* Model */,
 				E8468B5124EEAD0800E7105C /* View */,
@@ -281,6 +284,14 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		E8CF282C24FE8E1C003AD89D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF282D24FE8E38003AD89D /* JFHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +370,7 @@
 				E8468B8224F262C700E7105C /* JFPageTitleView.swift in Sources */,
 				E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
+				E8CF282E24FE8E38003AD89D /* JFHomeViewModel.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
