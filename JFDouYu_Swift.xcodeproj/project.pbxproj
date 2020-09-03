@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A131C28F30175E18958FF31 /* Pods_JFDouYu_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -31,9 +32,12 @@
 		E8CF2838250139E3003AD89D /* JFCollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF2836250139E3003AD89D /* JFCollectionViewNormalCell.xib */; };
 		E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */; };
 		E8CF283C25014F34003AD89D /* JFCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */; };
+		E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D861897C22F2BCCCDEBDBBE /* Pods-JFDouYu_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFDouYu_Swift.debug.xcconfig"; path = "Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		A34735B3034DEB526E850C0B /* Pods-JFDouYu_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFDouYu_Swift.release.xcconfig"; path = "Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		E8CF2836250139E3003AD89D /* JFCollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
+		E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFNetworkTool.swift; sourceTree = "<group>"; };
+		F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFDouYu_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A131C28F30175E18958FF31 /* Pods_JFDouYu_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270FDAAE57A35555DBBC3DD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EF0778A14F8072237C2EFB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D861897C22F2BCCCDEBDBBE /* Pods-JFDouYu_Swift.debug.xcconfig */,
+				A34735B3034DEB526E850C0B /* Pods-JFDouYu_Swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E8468B1724EE9D6600E7105C = {
 			isa = PBXGroup;
 			children = (
 				E8468B2224EE9D6600E7105C /* JFDouYu_Swift */,
 				E8468B2124EE9D6600E7105C /* Products */,
+				2EF0778A14F8072237C2EFB5 /* Pods */,
+				270FDAAE57A35555DBBC3DD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,6 +316,7 @@
 		E8468B6224EEAD0800E7105C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E8CF283D25015C86003AD89D /* Network */,
 				E8468B6324EEAD0800E7105C /* Extention */,
 				E8468B8524F3E80C00E7105C /* JFConst.swift */,
 			);
@@ -313,6 +340,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E8CF283D25015C86003AD89D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,9 +355,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8468B3424EE9D7000E7105C /* Build configuration list for PBXNativeTarget "JFDouYu_Swift" */;
 			buildPhases = (
+				0CD72686D39C5335B4792DE7 /* [CP] Check Pods Manifest.lock */,
 				E8468B1C24EE9D6600E7105C /* Sources */,
 				E8468B1D24EE9D6600E7105C /* Frameworks */,
 				E8468B1E24EE9D6600E7105C /* Resources */,
+				4B1AF6B32E6B68E3F89828D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +423,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CD72686D39C5335B4792DE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JFDouYu_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1AF6B32E6B68E3F89828D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8468B1C24EE9D6600E7105C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -397,6 +476,7 @@
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
 				E8CF282E24FE8E38003AD89D /* JFHomeViewModel.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
+				E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */,
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
@@ -562,6 +642,7 @@
 		};
 		E8468B3524EE9D7000E7105C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D861897C22F2BCCCDEBDBBE /* Pods-JFDouYu_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,6 +661,7 @@
 		};
 		E8468B3624EE9D7000E7105C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A34735B3034DEB526E850C0B /* Pods-JFDouYu_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
