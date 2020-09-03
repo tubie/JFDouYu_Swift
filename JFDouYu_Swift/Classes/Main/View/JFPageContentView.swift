@@ -165,8 +165,6 @@ extension JFPageContentView:UICollectionViewDelegate{
             }
         }
         
-        print("progress:\(progress) sourceIndex:\(sourceIndex) targetIndex:\(targetIndex) ")
-        
         delegate?.JFPageContentViewScrollWith(pageContentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
 
         

@@ -11,9 +11,10 @@ import UIKit
 
 let kScreenWidth = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
-let kStatusBarHeight:CGFloat = 20
-let kNavigationBarHeight:CGFloat = 64
-let kTabBarHeight:CGFloat = 64
+
+let kStatusBarHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height
+let kNavigationBarHeight:CGFloat = 44
+let kTabBarHeight:CGFloat = 44
 
 
 

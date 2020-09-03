@@ -24,7 +24,8 @@ class JFHomeViewController: UIViewController {
     private lazy var pageContentView:JFPageContentView = { [weak self ] in
         let contentViewFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight + KtitleViewH, width: kScreenWidth, height: kScreenHeight - kStatusBarHeight - kNavigationBarHeight - KtitleViewH - kTabBarHeight)
         var childVcs = [UIViewController]()
-        for _ in 0..<4 {
+        childVcs.append(RecommendViewController())
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)), a: 1.0)
             childVcs.append(vc)
