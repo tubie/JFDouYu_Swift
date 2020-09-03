@@ -29,6 +29,8 @@
 		E8CF28342501318E003AD89D /* JFCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF28322501318E003AD89D /* JFCollectionHeaderView.xib */; };
 		E8CF2837250139E3003AD89D /* JFCollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF2835250139E3003AD89D /* JFCollectionViewNormalCell.swift */; };
 		E8CF2838250139E3003AD89D /* JFCollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF2836250139E3003AD89D /* JFCollectionViewNormalCell.xib */; };
+		E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */; };
+		E8CF283C25014F34003AD89D /* JFCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		E8CF28322501318E003AD89D /* JFCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionHeaderView.xib; sourceTree = "<group>"; };
 		E8CF2835250139E3003AD89D /* JFCollectionViewNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewNormalCell.swift; sourceTree = "<group>"; };
 		E8CF2836250139E3003AD89D /* JFCollectionViewNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewNormalCell.xib; sourceTree = "<group>"; };
+		E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewPrettyCell.swift; sourceTree = "<group>"; };
+		E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +281,8 @@
 				E8468B8324F262E200E7105C /* JFPageContentView.swift */,
 				E8CF2835250139E3003AD89D /* JFCollectionViewNormalCell.swift */,
 				E8CF2836250139E3003AD89D /* JFCollectionViewNormalCell.xib */,
+				E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */,
+				E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CF283C25014F34003AD89D /* JFCollectionViewPrettyCell.xib in Resources */,
 				E8468B3024EE9D7000E7105C /* LaunchScreen.storyboard in Resources */,
 				E8468B2D24EE9D7000E7105C /* Assets.xcassets in Resources */,
 				E8CF2838250139E3003AD89D /* JFCollectionViewNormalCell.xib in Resources */,
@@ -394,6 +401,7 @@
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
+				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
 				E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */,
 				E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */,
 				E8CF28332501318E003AD89D /* JFCollectionHeaderView.swift in Sources */,

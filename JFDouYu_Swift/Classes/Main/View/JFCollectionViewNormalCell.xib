@@ -43,7 +43,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JF就是干" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWQ-n4-wb2">
-                        <rect key="frame" x="0.0" y="93" width="42" height="12"/>
+                        <rect key="frame" x="5" y="93" width="42" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                 <constraint firstItem="AFO-QO-l9U" firstAttribute="top" secondItem="HiR-Fw-2cW" secondAttribute="bottom" id="WYG-eZ-1qK"/>
                 <constraint firstAttribute="trailing" secondItem="AFO-QO-l9U" secondAttribute="trailing" constant="10" id="aJc-j7-5Vi"/>
                 <constraint firstItem="HiR-Fw-2cW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kad-iM-cJs"/>
-                <constraint firstItem="DWQ-n4-wb2" firstAttribute="leading" secondItem="HiR-Fw-2cW" secondAttribute="leading" id="m2q-k4-6Lo"/>
+                <constraint firstItem="DWQ-n4-wb2" firstAttribute="leading" secondItem="HiR-Fw-2cW" secondAttribute="leading" constant="5" id="m2q-k4-6Lo"/>
                 <constraint firstItem="W05-Pl-Xbb" firstAttribute="trailing" secondItem="HiR-Fw-2cW" secondAttribute="trailing" constant="-5" id="oJq-PA-X3f"/>
                 <constraint firstItem="DWQ-n4-wb2" firstAttribute="bottom" secondItem="HiR-Fw-2cW" secondAttribute="bottom" constant="-5" id="oPk-0s-5Xo"/>
                 <constraint firstAttribute="bottom" secondItem="g3J-tj-UDW" secondAttribute="bottom" constant="10" id="p6m-CK-t7E"/>
