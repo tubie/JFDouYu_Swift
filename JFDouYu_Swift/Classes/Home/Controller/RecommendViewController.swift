@@ -13,15 +13,15 @@ private let kItemW:CGFloat = (kScreenWidth - kItemMargin * 3)/2
 private let kNormalItemH:CGFloat = kItemW * 3 / 4
 private let kPrettyItemH:CGFloat = kItemW * 4 / 3
 
-
 private let KNormalCellID = "KNormalCellID"
 private let KPrettyCellID = "KPrettyCellID"
-
 private let KHeaderViewID = "KHeaderViewID"
-
 private let KHeaderViewH:CGFloat = 50
 
 class RecommendViewController: UIViewController {
+    
+    //懒加载一个对象
+    private lazy var recommendVM:JFRecommenViewModel =  JFRecommenViewModel()
     
     private lazy var collectionView:UICollectionView = {
         let frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
@@ -61,6 +61,8 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
                 
         setUpUI()
+        
+        loadData()
         
        
         // Do any additional setup after loading the view.
@@ -107,4 +109,10 @@ extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDel
         return CGSize(width: kItemW, height: kNormalItemH)
     }
     
+}
+
+extension RecommendViewController{
+    private func loadData(){
+        recommendVM.requestData()
+    }
 }

@@ -30,7 +30,7 @@ class JFNetworkTool{
         Alamofire.request(urlString,
                           method:method ,
                           parameters: parameters,
-                          encoding: UTF8.self as! ParameterEncoding,
+                          encoding: URLEncoding.default,
                           headers: nil).responseJSON { (response) in
             guard let result = response.result.value  else{
                 print(response.result.error as Any)

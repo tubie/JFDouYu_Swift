@@ -24,7 +24,7 @@
 		E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8324F262E200E7105C /* JFPageContentView.swift */; };
 		E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8524F3E80C00E7105C /* JFConst.swift */; };
 		E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */; };
-		E8CF282E24FE8E38003AD89D /* JFHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF282D24FE8E38003AD89D /* JFHomeViewModel.swift */; };
+		E8CF282E24FE8E38003AD89D /* JFRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF282D24FE8E38003AD89D /* JFRecommendViewModel.swift */; };
 		E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF282F24FFD937003AD89D /* RecommendViewController.swift */; };
 		E8CF28332501318E003AD89D /* JFCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF28312501318E003AD89D /* JFCollectionHeaderView.swift */; };
 		E8CF28342501318E003AD89D /* JFCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF28322501318E003AD89D /* JFCollectionHeaderView.xib */; };
@@ -33,6 +33,7 @@
 		E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */; };
 		E8CF283C25014F34003AD89D /* JFCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */; };
 		E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */; };
+		E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF284025016AAE003AD89D /* NSDate-Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,7 @@
 		E8468B8324F262E200E7105C /* JFPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFPageContentView.swift; sourceTree = "<group>"; };
 		E8468B8524F3E80C00E7105C /* JFConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFConst.swift; sourceTree = "<group>"; };
 		E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extention.swift"; sourceTree = "<group>"; };
-		E8CF282D24FE8E38003AD89D /* JFHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFHomeViewModel.swift; sourceTree = "<group>"; };
+		E8CF282D24FE8E38003AD89D /* JFRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFRecommendViewModel.swift; sourceTree = "<group>"; };
 		E8CF282F24FFD937003AD89D /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		E8CF28312501318E003AD89D /* JFCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionHeaderView.swift; sourceTree = "<group>"; };
 		E8CF28322501318E003AD89D /* JFCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFNetworkTool.swift; sourceTree = "<group>"; };
+		E8CF284025016AAE003AD89D /* NSDate-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extention.swift"; sourceTree = "<group>"; };
 		F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFDouYu_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -328,6 +330,7 @@
 			children = (
 				E8468B7F24EFA5E800E7105C /* UIBarButtonItem-Extention.swift */,
 				E8468B8724F4F3B300E7105C /* UIColor-Extention.swift */,
+				E8CF284025016AAE003AD89D /* NSDate-Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -335,7 +338,7 @@
 		E8CF282C24FE8E1C003AD89D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E8CF282D24FE8E38003AD89D /* JFHomeViewModel.swift */,
+				E8CF282D24FE8E38003AD89D /* JFRecommendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -474,13 +477,14 @@
 				E8468B8224F262C700E7105C /* JFPageTitleView.swift in Sources */,
 				E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
-				E8CF282E24FE8E38003AD89D /* JFHomeViewModel.swift in Sources */,
+				E8CF282E24FE8E38003AD89D /* JFRecommendViewModel.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
 				E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */,
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
+				E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */,
 				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
 				E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */,
 				E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */,
