@@ -34,6 +34,8 @@
 		E8CF283C25014F34003AD89D /* JFCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */; };
 		E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */; };
 		E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF284025016AAE003AD89D /* NSDate-Extention.swift */; };
+		E8CF284325021DB6003AD89D /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF284225021DB6003AD89D /* AnchorGroup.swift */; };
+		E8CF2845250224FE003AD89D /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF2844250224FE003AD89D /* AnchorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		E8CF283E25015CCF003AD89D /* JFNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFNetworkTool.swift; sourceTree = "<group>"; };
 		E8CF284025016AAE003AD89D /* NSDate-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extention.swift"; sourceTree = "<group>"; };
+		E8CF284225021DB6003AD89D /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		E8CF2844250224FE003AD89D /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JFDouYu_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -298,6 +302,8 @@
 		E8468B6024EEAD0800E7105C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E8CF284225021DB6003AD89D /* AnchorGroup.swift */,
+				E8CF2844250224FE003AD89D /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,12 +488,14 @@
 				E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */,
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
+				E8CF284325021DB6003AD89D /* AnchorGroup.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
 				E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */,
 				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
 				E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */,
 				E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */,
+				E8CF2845250224FE003AD89D /* AnchorModel.swift in Sources */,
 				E8CF28332501318E003AD89D /* JFCollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

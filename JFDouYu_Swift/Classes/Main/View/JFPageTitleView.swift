@@ -96,7 +96,7 @@ extension JFPageTitleView{
     private func setupBottomLineAndScrollLine(){
         let bottomLine = UIView()
         let lineH:CGFloat = 0.5
-        bottomLine.backgroundColor = UIColor(r: KNormalColor.0, g: KNormalColor.1, b: KNormalColor.2, a: 1)
+        bottomLine.backgroundColor = UIColor(r: 234, g: 234, b: 234, a: 1)
         bottomLine.frame = CGRect(x: 0, y:frame.height - lineH, width: frame.width, height: lineH)
         addSubview(bottomLine)
         

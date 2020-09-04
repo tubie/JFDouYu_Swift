@@ -78,10 +78,13 @@ extension RecommendViewController{
 
 extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return recommendVM.anchorGroups.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        //取出组
+        let group = recommendVM.anchorGroups[section]
+        //取出组的 anchors的数量
+        return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -99,6 +102,8 @@ extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KHeaderViewID, for: indexPath)
+        let group = recommendVM.anchorGroups[indexPath.section]
+        
         return headerView
     }
     
@@ -113,6 +118,8 @@ extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDel
 
 extension RecommendViewController{
     private func loadData(){
-        recommendVM.requestData()
+        recommendVM.requestData {
+            self.collectionView.reloadData()
+        }
     }
 }
