@@ -9,29 +9,20 @@
 import UIKit
 import Kingfisher
 
-class JFCollectionViewNormalCell: UICollectionViewCell {
+class JFCollectionViewNormalCell: JFCollectionViewBaseCell {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var nickNameLabel: UILabel!
-    @IBOutlet weak var onlineBtn: UIButton!
+ 
     @IBOutlet weak var roomNameLabel: UILabel!
     
-    var anchor:AnchorModel?{
+    //Overriding declaration requires an 'override' keyword
+    //父类已经定义了该属性子类不能 一样 如果要一样的化要加 override重写
+    override var anchor:AnchorModel?{
         didSet{
             guard let anchor = anchor else { return }
-            iconImageView.kf.setImage(with: URL(string: anchor.vertical_src))
-            nickNameLabel.text = anchor.nickname
-            var onlineStr:String = ""
-            if anchor.online > 10000 {
-                onlineStr = "\(Int(anchor.online/10000))万在线"
-            }else{
-                onlineStr = "\(onlineStr)在线"
-            }
-            onlineBtn.setTitle(onlineStr, for: .normal)
+            //将属性传递给父类
+             super.anchor = anchor
             roomNameLabel.text = anchor.room_name
         }
-        
-        
     }
     
     override func awakeFromNib() {

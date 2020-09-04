@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A131C28F30175E18958FF31 /* Pods_JFDouYu_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */; };
+		E835170725028CA000D47300 /* JFCollectionViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835170625028CA000D47300 /* JFCollectionViewBaseCell.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		8D861897C22F2BCCCDEBDBBE /* Pods-JFDouYu_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFDouYu_Swift.debug.xcconfig"; path = "Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		A34735B3034DEB526E850C0B /* Pods-JFDouYu_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFDouYu_Swift.release.xcconfig"; path = "Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		E835170625028CA000D47300 /* JFCollectionViewBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewBaseCell.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				E8CF2836250139E3003AD89D /* JFCollectionViewNormalCell.xib */,
 				E8CF283925014F34003AD89D /* JFCollectionViewPrettyCell.swift */,
 				E8CF283A25014F34003AD89D /* JFCollectionViewPrettyCell.xib */,
+				E835170625028CA000D47300 /* JFCollectionViewBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
 				E8CF284325021DB6003AD89D /* AnchorGroup.swift in Sources */,
+				E835170725028CA000D47300 /* JFCollectionViewBaseCell.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
 				E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */,
