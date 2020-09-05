@@ -9,9 +9,8 @@
 import UIKit
 
 private let kItemMargin:CGFloat = 10
-private let kItemW:CGFloat = (kScreenWidth - kItemMargin * 2 )/3
-private let KGameViewH:CGFloat = 90
-
+private let kItemW:CGFloat = (kScreenWidth - kItemMargin * 2 ) / 3
+private let kItemH : CGFloat = kItemW * 6 / 5
 private let KGameCellID = "KGameCellID"
 
 class GameViewController: UIViewController {
@@ -21,7 +20,7 @@ class GameViewController: UIViewController {
     fileprivate lazy var collectionView:UICollectionView = {
             let frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
             let layout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSize(width: kItemW, height: KGameViewH)
+            layout.itemSize = CGSize(width: kItemW, height: kItemH)
             layout.minimumLineSpacing = 0
             layout.minimumInteritemSpacing = kItemMargin
             //设置组头
@@ -72,10 +71,12 @@ extension GameViewController:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGameCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGameCellID, for: indexPath) as! JFCollectionGameCell
         let gameModel = gameViewModel.gameModels[indexPath.item]
-        print(gameModel.tag_name)
-        cell.backgroundColor = indexPath.item % 3 == 0 ? UIColor.red : UIColor.purple
+        // cell.group = gameModel
+        // Cannot assign value of type 'JFGameModel' to type 'AnchorGroup' 模型不匹配
+
+        cell.baseGame = gameModel
         return cell
         
     }

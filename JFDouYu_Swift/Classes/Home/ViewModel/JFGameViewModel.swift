@@ -16,8 +16,8 @@ class JFGameViewModel{
 
 extension JFGameViewModel{
      func requestGameData( finishCallBack:@escaping ()->()){
-        let parameters = ["shortName" : "game"]
-        JFNetworkTool.requestData(type: .GET, urlString: "http://capi.douyucdn.cn/api/v1/getColumnDetail", parameters:parameters as [String : NSString]) { (response) in
+//        let parameters = ["shortName" : "game"]
+        JFNetworkTool.requestData(type: .GET, urlString: "http://capi.douyucdn.cn/api/v1/getColumnDetail") { (response) in
             
             guard let response = response as? [String:Any] else { return }
                      

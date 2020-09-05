@@ -13,12 +13,12 @@ class JFCollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bottomLabel: UILabel!
     
-    var group:AnchorGroup?{
+    var baseGame:BaseGameModel?{
         didSet{
-            bottomLabel.text = group?.tag_name
+            bottomLabel.text = baseGame?.tag_name
 //            imageView.kf.setImage(with: URL(string: group?.icon_url ?? ""))
             
-            imageView.kf.setImage(with: URL(string: group?.icon_url ?? ""), placeholder: UIImage(named: "home_more_btn"))
+            imageView.kf.setImage(with: URL(string: baseGame?.icon_url ?? ""), placeholder: UIImage(named: "home_more_btn"))
         }
     }
     

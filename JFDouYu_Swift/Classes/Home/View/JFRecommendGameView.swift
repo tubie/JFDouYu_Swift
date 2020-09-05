@@ -47,7 +47,7 @@ extension JFRecommendGameView{
 extension JFRecommendGameView:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JFRecommendGameCellID, for: indexPath) as! JFCollectionGameCell
-        cell.group = groups![indexPath.item]
+        cell.baseGame = groups![indexPath.item]
         return cell
     }
     
