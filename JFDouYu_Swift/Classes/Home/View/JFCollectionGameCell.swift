@@ -18,7 +18,7 @@ class JFCollectionGameCell: UICollectionViewCell {
             bottomLabel.text = group?.tag_name
 //            imageView.kf.setImage(with: URL(string: group?.icon_url ?? ""))
             
-            imageView.kf.setImage(with: URL(string: group?.icon_url ?? ""), placeholder: UIImage(named: "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
+            imageView.kf.setImage(with: URL(string: group?.icon_url ?? ""), placeholder: UIImage(named: "home_more_btn"))
         }
     }
     

@@ -18,6 +18,10 @@
 		E83517152503840F00D47300 /* JFRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517142503840F00D47300 /* JFRecommendGameView.xib */; };
 		E83517182503850200D47300 /* JFCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517162503850200D47300 /* JFCollectionGameCell.swift */; };
 		E83517192503850200D47300 /* JFCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517172503850200D47300 /* JFCollectionGameCell.xib */; };
+		E835171B2503EE4E00D47300 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835171A2503EE4E00D47300 /* GameViewController.swift */; };
+		E835171D2503F79E00D47300 /* JFGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835171C2503F79E00D47300 /* JFGameViewModel.swift */; };
+		E835171F2503FB5300D47300 /* JFGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835171E2503FB5300D47300 /* JFGameModel.swift */; };
+		E83517212503FDB500D47300 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517202503FDB500D47300 /* BaseGameModel.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -61,6 +65,10 @@
 		E83517142503840F00D47300 /* JFRecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFRecommendGameView.xib; sourceTree = "<group>"; };
 		E83517162503850200D47300 /* JFCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionGameCell.swift; sourceTree = "<group>"; };
 		E83517172503850200D47300 /* JFCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionGameCell.xib; sourceTree = "<group>"; };
+		E835171A2503EE4E00D47300 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E835171C2503F79E00D47300 /* JFGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFGameViewModel.swift; sourceTree = "<group>"; };
+		E835171E2503FB5300D47300 /* JFGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFGameModel.swift; sourceTree = "<group>"; };
+		E83517202503FDB500D47300 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 				E8468B7324EF91DE00E7105C /* Home.storyboard */,
 				E8468B7D24EFA43E00E7105C /* JFHomeViewController.swift */,
 				E8CF282F24FFD937003AD89D /* RecommendViewController.swift */,
+				E835171A2503EE4E00D47300 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				E835170C2503667C00D47300 /* JFCycleModel.swift */,
+				E835171E2503FB5300D47300 /* JFGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +343,7 @@
 			children = (
 				E8CF284225021DB6003AD89D /* AnchorGroup.swift */,
 				E8CF2844250224FE003AD89D /* AnchorModel.swift */,
+				E83517202503FDB500D47300 /* BaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				E8CF282D24FE8E38003AD89D /* JFRecommendViewModel.swift */,
+				E835171C2503F79E00D47300 /* JFGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -515,9 +527,12 @@
 			files = (
 				E8CF2837250139E3003AD89D /* JFCollectionViewNormalCell.swift in Sources */,
 				E8468B8224F262C700E7105C /* JFPageTitleView.swift in Sources */,
+				E835171D2503F79E00D47300 /* JFGameViewModel.swift in Sources */,
 				E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */,
+				E83517212503FDB500D47300 /* BaseGameModel.swift in Sources */,
 				E83517182503850200D47300 /* JFCollectionGameCell.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
+				E835171B2503EE4E00D47300 /* GameViewController.swift in Sources */,
 				E8CF282E24FE8E38003AD89D /* JFRecommendViewModel.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
 				E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */,
@@ -528,6 +543,7 @@
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
 				E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */,
+				E835171F2503FB5300D47300 /* JFGameModel.swift in Sources */,
 				E83517092503444000D47300 /* JFRecommendCycleView.swift in Sources */,
 				E835171025036C2800D47300 /* JFCollectionViewCycleCell.swift in Sources */,
 				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
