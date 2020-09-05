@@ -13,6 +13,8 @@ private let kItemW:CGFloat = (kScreenWidth - kItemMargin * 3)/2
 private let kNormalItemH:CGFloat = kItemW * 3 / 4
 private let kPrettyItemH:CGFloat = kItemW * 4 / 3
 private let KCycleViewH:CGFloat = kScreenWidth * 3 / 8
+private let KGameViewH:CGFloat = 90
+
 
 private let KNormalCellID = "KNormalCellID"
 private let KPrettyCellID = "KPrettyCellID"
@@ -60,9 +62,15 @@ class RecommendViewController: UIViewController {
     
     private lazy var cycleView:JFRecommendCycleView = {
         let  view =  JFRecommendCycleView.recommendCycleView()
-        view.frame = CGRect(x: 0, y: -KCycleViewH, width: kScreenWidth, height: KCycleViewH)
+        view.frame = CGRect(x: 0, y: -(KCycleViewH+KGameViewH), width: kScreenWidth, height: KCycleViewH)
         return view
     }()
+    
+    private lazy var gameView:JFRecommendGameView = {
+           let  view =  JFRecommendGameView.recommendGameView()
+           view.frame = CGRect(x: 0, y: -KGameViewH, width: kScreenWidth, height: KGameViewH)
+           return view
+       }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,9 +87,11 @@ extension RecommendViewController{
     func setUpUI(){
         view.addSubview(collectionView)
         collectionView.addSubview(cycleView)
+        collectionView.addSubview(gameView)
+
         
         //增加内边距 来使 添加在collectionView的view显示
-        collectionView.contentInset = UIEdgeInsets(top: KCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: KCycleViewH + KGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -138,8 +148,10 @@ extension RecommendViewController{
         //这里不会循环引用
         //闭包对控制器强引用 控制器对对象强引用， 但是对象没有对闭包强引用
         // [weak self] in用不用都行
-        recommendVM.requestData { 
+        recommendVM.requestData {
             self.collectionView.reloadData()
+            
+            self.gameView.groups = self.recommendVM.anchorGroups
         }
         
         recommendVM.requestCycleData {

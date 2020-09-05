@@ -14,6 +14,10 @@
 		E835170D2503667C00D47300 /* JFCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835170C2503667C00D47300 /* JFCycleModel.swift */; };
 		E835171025036C2800D47300 /* JFCollectionViewCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835170E25036C2800D47300 /* JFCollectionViewCycleCell.swift */; };
 		E835171125036C2800D47300 /* JFCollectionViewCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835170F25036C2800D47300 /* JFCollectionViewCycleCell.xib */; };
+		E83517132503840100D47300 /* JFRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517122503840100D47300 /* JFRecommendGameView.swift */; };
+		E83517152503840F00D47300 /* JFRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517142503840F00D47300 /* JFRecommendGameView.xib */; };
+		E83517182503850200D47300 /* JFCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517162503850200D47300 /* JFCollectionGameCell.swift */; };
+		E83517192503850200D47300 /* JFCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517172503850200D47300 /* JFCollectionGameCell.xib */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -53,6 +57,10 @@
 		E835170C2503667C00D47300 /* JFCycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCycleModel.swift; sourceTree = "<group>"; };
 		E835170E25036C2800D47300 /* JFCollectionViewCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewCycleCell.swift; sourceTree = "<group>"; };
 		E835170F25036C2800D47300 /* JFCollectionViewCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionViewCycleCell.xib; sourceTree = "<group>"; };
+		E83517122503840100D47300 /* JFRecommendGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFRecommendGameView.swift; sourceTree = "<group>"; };
+		E83517142503840F00D47300 /* JFRecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFRecommendGameView.xib; sourceTree = "<group>"; };
+		E83517162503850200D47300 /* JFCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionGameCell.swift; sourceTree = "<group>"; };
+		E83517172503850200D47300 /* JFCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFCollectionGameCell.xib; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +206,10 @@
 				E835170A2503446000D47300 /* JFRecommendCycleView.xib */,
 				E835170E25036C2800D47300 /* JFCollectionViewCycleCell.swift */,
 				E835170F25036C2800D47300 /* JFCollectionViewCycleCell.xib */,
+				E83517122503840100D47300 /* JFRecommendGameView.swift */,
+				E83517142503840F00D47300 /* JFRecommendGameView.xib */,
+				E83517162503850200D47300 /* JFCollectionGameCell.swift */,
+				E83517172503850200D47300 /* JFCollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,6 +451,8 @@
 				E8468B3024EE9D7000E7105C /* LaunchScreen.storyboard in Resources */,
 				E8468B2D24EE9D7000E7105C /* Assets.xcassets in Resources */,
 				E8CF2838250139E3003AD89D /* JFCollectionViewNormalCell.xib in Resources */,
+				E83517152503840F00D47300 /* JFRecommendGameView.xib in Resources */,
+				E83517192503850200D47300 /* JFCollectionGameCell.xib in Resources */,
 				E8468B2B24EE9D6600E7105C /* Main.storyboard in Resources */,
 				E8CF28342501318E003AD89D /* JFCollectionHeaderView.xib in Resources */,
 				E8468B7724EF920100E7105C /* Live.storyboard in Resources */,
@@ -502,6 +516,7 @@
 				E8CF2837250139E3003AD89D /* JFCollectionViewNormalCell.swift in Sources */,
 				E8468B8224F262C700E7105C /* JFPageTitleView.swift in Sources */,
 				E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */,
+				E83517182503850200D47300 /* JFCollectionGameCell.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
 				E8CF282E24FE8E38003AD89D /* JFRecommendViewModel.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
@@ -516,6 +531,7 @@
 				E83517092503444000D47300 /* JFRecommendCycleView.swift in Sources */,
 				E835171025036C2800D47300 /* JFCollectionViewCycleCell.swift in Sources */,
 				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
+				E83517132503840100D47300 /* JFRecommendGameView.swift in Sources */,
 				E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */,
 				E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */,
 				E8CF2845250224FE003AD89D /* AnchorModel.swift in Sources */,
