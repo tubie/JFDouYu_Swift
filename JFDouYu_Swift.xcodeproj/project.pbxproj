@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6A131C28F30175E18958FF31 /* Pods_JFDouYu_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40FBA65BC91B35EA8EA1F39 /* Pods_JFDouYu_Swift.framework */; };
 		E835170725028CA000D47300 /* JFCollectionViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835170625028CA000D47300 /* JFCollectionViewBaseCell.swift */; };
+		E83517092503444000D47300 /* JFRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517082503444000D47300 /* JFRecommendCycleView.swift */; };
+		E835170B2503446000D47300 /* JFRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835170A2503446000D47300 /* JFRecommendCycleView.xib */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 		8D861897C22F2BCCCDEBDBBE /* Pods-JFDouYu_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFDouYu_Swift.debug.xcconfig"; path = "Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		A34735B3034DEB526E850C0B /* Pods-JFDouYu_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFDouYu_Swift.release.xcconfig"; path = "Target Support Files/Pods-JFDouYu_Swift/Pods-JFDouYu_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		E835170625028CA000D47300 /* JFCollectionViewBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFCollectionViewBaseCell.swift; sourceTree = "<group>"; };
+		E83517082503444000D47300 /* JFRecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFRecommendCycleView.swift; sourceTree = "<group>"; };
+		E835170A2503446000D47300 /* JFRecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFRecommendCycleView.xib; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			children = (
 				E8CF28312501318E003AD89D /* JFCollectionHeaderView.swift */,
 				E8CF28322501318E003AD89D /* JFCollectionHeaderView.xib */,
+				E83517082503444000D47300 /* JFRecommendCycleView.swift */,
+				E835170A2503446000D47300 /* JFRecommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				E8468B2B24EE9D6600E7105C /* Main.storyboard in Resources */,
 				E8CF28342501318E003AD89D /* JFCollectionHeaderView.xib in Resources */,
 				E8468B7724EF920100E7105C /* Live.storyboard in Resources */,
+				E835170B2503446000D47300 /* JFRecommendCycleView.xib in Resources */,
 				E8468B7524EF91DE00E7105C /* Home.storyboard in Resources */,
 				E8468B7C24EF92A200E7105C /* Profile.storyboard in Resources */,
 				E8468B7A24EF928500E7105C /* Follow.storyboard in Resources */,
@@ -496,6 +503,7 @@
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
 				E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */,
+				E83517092503444000D47300 /* JFRecommendCycleView.swift in Sources */,
 				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
 				E8468B8624F3E80C00E7105C /* JFConst.swift in Sources */,
 				E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */,
