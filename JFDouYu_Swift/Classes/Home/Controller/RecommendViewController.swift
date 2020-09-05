@@ -89,7 +89,6 @@ extension RecommendViewController{
         collectionView.addSubview(cycleView)
         collectionView.addSubview(gameView)
 
-        
         //增加内边距 来使 添加在collectionView的view显示
         collectionView.contentInset = UIEdgeInsets(top: KCycleViewH + KGameViewH, left: 0, bottom: 0, right: 0)
     }

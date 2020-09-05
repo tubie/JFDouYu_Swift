@@ -20,7 +20,6 @@ class JFRecommendGameView: UIView {
             groups?.remove(at: 0)
             let group = AnchorGroup()
             group.tag_name = "更多"
-            group.icon_url = "home_more_btn"
             groups?.append(group)
             collectionView.reloadData()
         }
