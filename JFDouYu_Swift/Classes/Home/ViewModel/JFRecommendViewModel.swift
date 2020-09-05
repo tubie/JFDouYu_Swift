@@ -12,6 +12,10 @@ class JFRecommenViewModel {
     //懒加载数组的属性 用来存放模型数据
     //供其他类调用 要去掉private
      lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()//创建数组
+    
+    //循环的 model
+    lazy var cycleModels:[JFCycleModel] = [JFCycleModel]()//
+
   
     //颜值
     private lazy var prettyGroups:AnchorGroup = AnchorGroup()
@@ -93,6 +97,26 @@ extension JFRecommenViewModel{
             self.anchorGroups.insert(self.hotGroups, at: 0)
             finishCallBack()
         }
+        
+    }
+    
+    
+    func requestCycleData(finishCallBack:@escaping()->()){
+        
+        JFNetworkTool.requestData(type: .GET, urlString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"] as  [String : NSString]) { (result) in
+                   
+               guard let result = result as?[String:NSObject] else { return }
+               
+               // as? [String:NSObject] 转成数组 并且数组是字典类型
+               guard let dataArray = result["data"] as? [[String:NSObject]] else { return}
+            
+            for dict in dataArray{
+                self.cycleModels.append(JFCycleModel(dict: dict))
+            }
+            finishCallBack()
+        }
+                   
+                   
         
     }
     

@@ -70,8 +70,6 @@ class RecommendViewController: UIViewController {
         setUpUI()
         
         loadData()
-        
-       
         // Do any additional setup after loading the view.
     }
 
@@ -137,8 +135,15 @@ extension RecommendViewController:UICollectionViewDataSource,UICollectionViewDel
 
 extension RecommendViewController{
     private func loadData(){
-        recommendVM.requestData {
+        //这里不会循环引用
+        //闭包对控制器强引用 控制器对对象强引用， 但是对象没有对闭包强引用
+        // [weak self] in用不用都行
+        recommendVM.requestData { 
             self.collectionView.reloadData()
+        }
+        
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }

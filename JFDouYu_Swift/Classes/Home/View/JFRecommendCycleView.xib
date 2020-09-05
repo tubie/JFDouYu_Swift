@@ -25,7 +25,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uQl-Kr-fby">
-                    <rect key="frame" x="365" y="113" width="39" height="37"/>
+                    <rect key="frame" x="365" y="118" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     <color key="currentPageIndicatorTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
@@ -34,7 +34,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="frQ-Jf-jPo" secondAttribute="trailing" id="D1t-vL-MFZ"/>
                 <constraint firstItem="frQ-Jf-jPo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EKq-vV-dKi"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uQl-Kr-fby" secondAttribute="bottom" id="RrT-hJ-p9T"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uQl-Kr-fby" secondAttribute="bottom" constant="-5" id="RrT-hJ-p9T"/>
                 <constraint firstItem="frQ-Jf-jPo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Z7b-XB-Koq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uQl-Kr-fby" secondAttribute="trailing" constant="10" id="cPa-Hq-mjf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="frQ-Jf-jPo" secondAttribute="bottom" id="wTo-OO-aoa"/>
@@ -43,7 +43,6 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="collectionView" destination="frQ-Jf-jPo" id="Eby-Nu-hHH"/>
-                <outlet property="cycleLayout" destination="T5i-Fz-SmQ" id="Z54-V2-7qy"/>
                 <outlet property="pageControllerView" destination="uQl-Kr-fby" id="FwA-7L-Mzn"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="-149.33035714285714"/>
