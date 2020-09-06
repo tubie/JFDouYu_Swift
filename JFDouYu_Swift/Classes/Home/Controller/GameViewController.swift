@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
             let layout = UICollectionViewFlowLayout()
             layout.itemSize = CGSize(width: kItemW, height: kItemH)
             layout.minimumLineSpacing = 0
-            layout.minimumInteritemSpacing = kItemMargin
+            layout.minimumInteritemSpacing = 0
             //设置组头
 //            layout.headerReferenceSize = CGSize(width: kScreenWidth, height: KHeaderViewH)
             layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
