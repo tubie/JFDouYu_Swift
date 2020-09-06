@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="55" height="70"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Vv-VRr">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Vv-VRr">
                         <rect key="frame" x="5" y="4.5" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="LnG-nU-y1p"/>
@@ -31,9 +31,9 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JF就是干" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr1-st-jal">
-                        <rect key="frame" x="5" y="50" width="45" height="15"/>
+                        <rect key="frame" x="0.0" y="54.5" width="55" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="Nre-GL-9FZ"/>
+                            <constraint firstAttribute="height" constant="15" id="u4X-ap-f6C"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,14 +50,14 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="xr1-st-jal" secondAttribute="bottom" constant="5" id="Vb7-gm-c34"/>
+                <constraint firstItem="xr1-st-jal" firstAttribute="top" secondItem="VUo-Vv-VRr" secondAttribute="bottom" constant="5" id="ThL-JY-fn4"/>
                 <constraint firstItem="VUo-Vv-VRr" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="WNG-lU-wxo"/>
                 <constraint firstAttribute="trailing" secondItem="gg2-NX-Hvj" secondAttribute="trailing" id="ZqV-hE-YYX"/>
+                <constraint firstAttribute="trailing" secondItem="xr1-st-jal" secondAttribute="trailing" id="fYO-Bs-Da8"/>
                 <constraint firstAttribute="bottom" secondItem="gg2-NX-Hvj" secondAttribute="bottom" constant="-1" id="hA0-tp-beu"/>
                 <constraint firstItem="VUo-Vv-VRr" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="khN-nz-QP1"/>
-                <constraint firstAttribute="trailing" secondItem="xr1-st-jal" secondAttribute="trailing" constant="5" id="oEI-tb-Kg0"/>
+                <constraint firstItem="xr1-st-jal" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lWu-GO-p2b"/>
                 <constraint firstItem="gg2-NX-Hvj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vB5-fz-Id5"/>
-                <constraint firstItem="xr1-st-jal" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="x2X-tX-DXl"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="106" height="106"/>

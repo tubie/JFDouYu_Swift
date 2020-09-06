@@ -148,9 +148,17 @@ extension RecommendViewController{
         //闭包对控制器强引用 控制器对对象强引用， 但是对象没有对闭包强引用
         // [weak self] in用不用都行
         recommendVM.requestData {
+
             self.collectionView.reloadData()
             
-            self.gameView.groups = self.recommendVM.anchorGroups
+           var groups = self.recommendVM.anchorGroups
+           groups.remove(at: 0)
+           groups.remove(at: 0)
+           let group = AnchorGroup()
+           group.tag_name = "更多"
+           groups.append(group)
+          self.gameView.groups = groups
+
         }
         
         recommendVM.requestCycleData {

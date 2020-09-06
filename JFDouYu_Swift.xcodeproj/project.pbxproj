@@ -22,6 +22,8 @@
 		E835171D2503F79E00D47300 /* JFGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835171C2503F79E00D47300 /* JFGameViewModel.swift */; };
 		E835171F2503FB5300D47300 /* JFGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835171E2503FB5300D47300 /* JFGameModel.swift */; };
 		E83517212503FDB500D47300 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517202503FDB500D47300 /* BaseGameModel.swift */; };
+		E83517232505160E00D47300 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517222505160E00D47300 /* AmuseViewController.swift */; };
+		E835172725051CF600D47300 /* JFAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835172625051CF600D47300 /* JFAmuseViewModel.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -69,6 +71,8 @@
 		E835171C2503F79E00D47300 /* JFGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFGameViewModel.swift; sourceTree = "<group>"; };
 		E835171E2503FB5300D47300 /* JFGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFGameModel.swift; sourceTree = "<group>"; };
 		E83517202503FDB500D47300 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
+		E83517222505160E00D47300 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
+		E835172625051CF600D47300 /* JFAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAmuseViewModel.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				E8468B7D24EFA43E00E7105C /* JFHomeViewController.swift */,
 				E8CF282F24FFD937003AD89D /* RecommendViewController.swift */,
 				E835171A2503EE4E00D47300 /* GameViewController.swift */,
+				E83517222505160E00D47300 /* AmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 			children = (
 				E8CF282D24FE8E38003AD89D /* JFRecommendViewModel.swift */,
 				E835171C2503F79E00D47300 /* JFGameViewModel.swift */,
+				E835172625051CF600D47300 /* JFAmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -537,7 +543,9 @@
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
 				E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */,
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
+				E83517232505160E00D47300 /* AmuseViewController.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
+				E835172725051CF600D47300 /* JFAmuseViewModel.swift in Sources */,
 				E8CF284325021DB6003AD89D /* AnchorGroup.swift in Sources */,
 				E835170725028CA000D47300 /* JFCollectionViewBaseCell.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,

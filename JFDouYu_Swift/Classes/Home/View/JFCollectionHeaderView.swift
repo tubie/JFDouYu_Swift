@@ -15,6 +15,7 @@ class JFCollectionHeaderView: UICollectionReusableView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
+    @IBOutlet weak var moreBtn: UIButton!
     //模型属性
     var anchorGroup:AnchorGroup?{
         didSet{
@@ -32,4 +33,11 @@ class JFCollectionHeaderView: UICollectionReusableView {
         // Initialization code
     }
     
+}
+
+//快速创建 JFCollectionHeaderView和 cell 公用
+extension JFCollectionHeaderView{
+    class func collectionHeaderView() -> JFCollectionHeaderView {
+        return Bundle.main.loadNibNamed("JFCollectionHeaderView", owner: nil, options: nil)?.first as! JFCollectionHeaderView
+    }
 }

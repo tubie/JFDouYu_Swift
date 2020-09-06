@@ -14,7 +14,7 @@ class JFRecommenViewModel {
      lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()//创建数组
     
     //循环的 model
-    lazy var cycleModels:[JFCycleModel] = [JFCycleModel]()//
+     lazy var cycleModels:[JFCycleModel] = [JFCycleModel]()//
 
   
     //颜值

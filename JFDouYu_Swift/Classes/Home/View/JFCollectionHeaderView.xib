@@ -65,6 +65,7 @@
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>
                 <outlet property="iconImageView" destination="ZKV-J2-XRW" id="obp-fL-kus"/>
+                <outlet property="moreBtn" destination="ozg-bw-NEz" id="MDF-XU-5C8"/>
                 <outlet property="titleLabel" destination="07N-Va-eW7" id="eJd-Q7-9uK"/>
             </connections>
             <point key="canvasLocation" x="18.840579710144929" y="36.495535714285715"/>

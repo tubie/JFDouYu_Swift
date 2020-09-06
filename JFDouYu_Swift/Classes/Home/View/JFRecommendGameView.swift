@@ -14,13 +14,8 @@ class JFRecommendGameView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var groups:[AnchorGroup]?{
+    var groups:[BaseGameModel]?{
         didSet{
-            groups?.remove(at: 0)
-            groups?.remove(at: 0)
-            let group = AnchorGroup()
-            group.tag_name = "更多"
-            groups?.append(group)
             collectionView.reloadData()
         }
     }
@@ -55,4 +50,11 @@ extension JFRecommendGameView:UICollectionViewDataSource{
         return groups?.count ?? 0
     }
     
+}
+
+//快速创建 JFRecommendGameView
+extension JFRecommendGameView{
+    class func rmGameView() ->JFRecommendGameView{
+        return Bundle.main.loadNibNamed("JFRecommendGameView", owner: nil, options: nil)?.first as!JFRecommendGameView
+    }
 }
