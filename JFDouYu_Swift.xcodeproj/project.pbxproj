@@ -25,6 +25,7 @@
 		E83517232505160E00D47300 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517222505160E00D47300 /* AmuseViewController.swift */; };
 		E835172725051CF600D47300 /* JFAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835172625051CF600D47300 /* JFAmuseViewModel.swift */; };
 		E835172A250522A300D47300 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8351729250522A300D47300 /* BaseViewModel.swift */; };
+		E835172E250660CD00D47300 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835172D250660CD00D47300 /* BaseAnchorViewController.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -75,6 +76,7 @@
 		E83517222505160E00D47300 /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		E835172625051CF600D47300 /* JFAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAmuseViewModel.swift; sourceTree = "<group>"; };
 		E8351729250522A300D47300 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E835172D250660CD00D47300 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				E8468B2924EE9D6600E7105C /* Main.storyboard */,
+				E835172D250660CD00D47300 /* BaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
 				E83517232505160E00D47300 /* AmuseViewController.swift in Sources */,
 				E835172A250522A300D47300 /* BaseViewModel.swift in Sources */,
+				E835172E250660CD00D47300 /* BaseAnchorViewController.swift in Sources */,
 				E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */,
 				E835172725051CF600D47300 /* JFAmuseViewModel.swift in Sources */,
 				E8CF284325021DB6003AD89D /* AnchorGroup.swift in Sources */,

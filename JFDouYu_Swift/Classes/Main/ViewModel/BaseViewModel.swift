@@ -11,7 +11,6 @@ import UIKit
 
 /// 抽取父类的思想 抽取属性 或者方法较少的那个类
 class BaseViewModel {
-    
      //供其他类调用 要去掉private
      lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()//创建数组
 }
