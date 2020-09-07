@@ -107,4 +107,10 @@ extension AmuseViewController:UICollectionViewDataSource,UICollectionViewDelegat
            return CGSize(width: kItemW, height: kNormalItemH)
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: KHeaderViewID, for: indexPath) as! JFCollectionHeaderView
+        headerView.anchorGroup = amuseViewModel.anchorGroups[indexPath.section]
+        return headerView
+    }
+    
 }
