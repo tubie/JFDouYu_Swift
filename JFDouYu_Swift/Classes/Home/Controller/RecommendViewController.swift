@@ -15,11 +15,8 @@ private let kPrettyItemH:CGFloat = kItemW * 4 / 3
 private let KCycleViewH:CGFloat = kScreenWidth * 3 / 8
 private let KGameViewH:CGFloat = 90
 
-
-private let KNormalCellID = "KNormalCellID"
 private let KPrettyCellID = "KPrettyCellID"
-private let KHeaderViewID = "KHeaderViewID"
-private let KHeaderViewH:CGFloat = 50
+
 
 class RecommendViewController: BaseAnchorViewController, UICollectionViewDelegateFlowLayout {
     
@@ -80,36 +77,16 @@ class RecommendViewController: BaseAnchorViewController, UICollectionViewDelegat
          return CGSize(width: kItemW, height: kNormalItemH)
      }
     
-
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.section == 1 {
+            let  cell =  collectionView.dequeueReusableCell(withReuseIdentifier: KPrettyCellID, for: indexPath) as! JFCollectionViewPrettyCell
+            cell.anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+            return cell
+        }else{
+            return super.collectionView(collectionView, cellForItemAt: indexPath)
+        }
+    }
 }
 
-
-//extension RecommendViewController :  {
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        //~~~2、只有section == 1的参数的cell是不同的，所以子类专门区分出来，然后进行布局和显示。
-//        if indexPath.section == 1 {
-//            // 1.取出PrettyCell
-//            let prettyCell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
-//
-//            // 2.设置数据
-//            prettyCell.anchor = recommendVM.anchorGroups[indexPath.section].anchors[indexPath.item]
-//
-//            return prettyCell
-//        } else {
-//            // 3、其余的和父类相同，我们直接使用父类的方法super，来显示数据。  由于index.section==1的cell比较特殊，且只有在Recommend界面才有这个cell,所以我们再子类中加载其数据，其余的section我们加载到父类中。
-//            //提取父类的意义：公共的方法和内容的加载我们都放到父类中，不同页面不同的界面展示，我们再在子类的上面添加相应的UI以及数据的处理，然后再调用父类的方法。
-//            print("打印的传给父类的索引为\(indexPath.section)")
-//            return super.collectionView(collectionView, cellForItemAt: indexPath)
-//        }
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if indexPath.section == 1 {
-//            return CGSize(width: kItemW, height: kPrettyItemH)
-//        }
-//
-//        return CGSize(width: kItemW, height: kNormalItemH)
-//    }
-//}
 
 
