@@ -8,10 +8,9 @@
 
 import UIKit
 
-class JFRecommenViewModel {
+class JFRecommenViewModel :BaseViewModel {
     //懒加载数组的属性 用来存放模型数据
-    //供其他类调用 要去掉private
-     lazy var anchorGroups:[AnchorGroup] = [AnchorGroup]()//创建数组
+
     
     //循环的 model
      lazy var cycleModels:[JFCycleModel] = [JFCycleModel]()//
@@ -76,21 +75,24 @@ extension JFRecommenViewModel{
         
         //请求游戏数据
         dispatch.enter()
-        JFNetworkTool.requestData(type: .GET, urlString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters:parameters  as [String : NSString]) { (result) in
-            
-            //字典转模型
-            guard let resultDict = result as? [String:NSObject]  else { return }
-            
-            // as? [String:NSObject] 转成数组 并且数组是字典类型
-            guard let dataArray = resultDict["data"] as? [[String:NSObject]] else { return}
-            
-            //遍历数组  获取字典并且转成模型对象
-            for group in dataArray{
-                let anchor = AnchorGroup(dict: group)
-                self.anchorGroups.append(anchor)
-            }
+        loadAnchorData(urlString: "http://capi.douyucdn.cn/api/v1/getHotCate",parameters:parameters as [String : NSString] ) {
             dispatch.leave()
         }
+//        JFNetworkTool.requestData(type: .GET, urlString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters:parameters  as [String : NSString]) { (result) in
+//
+//            //字典转模型
+//            guard let resultDict = result as? [String:NSObject]  else { return }
+//
+//            // as? [String:NSObject] 转成数组 并且数组是字典类型
+//            guard let dataArray = resultDict["data"] as? [[String:NSObject]] else { return}
+//
+//            //遍历数组  获取字典并且转成模型对象
+//            for group in dataArray{
+//                let anchor = AnchorGroup(dict: group)
+//                self.anchorGroups.append(anchor)
+//            }
+//            dispatch.leave()
+//        }
         
         dispatch.notify(queue: DispatchQueue.main) {
             self.anchorGroups.insert(self.prettyGroups, at: 0)
