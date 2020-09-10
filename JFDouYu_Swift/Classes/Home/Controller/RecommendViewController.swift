@@ -18,7 +18,7 @@ private let KGameViewH:CGFloat = 90
 private let KPrettyCellID = "KPrettyCellID"
 
 
-class RecommendViewController: BaseAnchorViewController, UICollectionViewDelegateFlowLayout {
+class RecommendViewController: BaseAnchorViewController {
     
     //懒加载一个对象
     private lazy var recommendVM:JFRecommenViewModel =  JFRecommenViewModel()

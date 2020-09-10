@@ -30,6 +30,8 @@
 		E835173425090D9B00D47300 /* JFAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835173325090D9B00D47300 /* JFAmuseMenuView.xib */; };
 		E83517372509E9C700D47300 /* JFAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517352509E9C700D47300 /* JFAmuseMenuViewCell.swift */; };
 		E83517382509E9C700D47300 /* JFAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */; };
+		E835173A2509FDB400D47300 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517392509FDB300D47300 /* FunnyViewController.swift */; };
+		E835173C250A023B00D47300 /* JFFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835173B250A023B00D47300 /* JFFunnyViewModel.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -85,6 +87,8 @@
 		E835173325090D9B00D47300 /* JFAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFAmuseMenuView.xib; sourceTree = "<group>"; };
 		E83517352509E9C700D47300 /* JFAmuseMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFAmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		E83517392509FDB300D47300 /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		E835173B250A023B00D47300 /* JFFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFFunnyViewModel.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 				E8CF282F24FFD937003AD89D /* RecommendViewController.swift */,
 				E835171A2503EE4E00D47300 /* GameViewController.swift */,
 				E83517222505160E00D47300 /* AmuseViewController.swift */,
+				E83517392509FDB300D47300 /* FunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				E8CF282D24FE8E38003AD89D /* JFRecommendViewModel.swift */,
 				E835171C2503F79E00D47300 /* JFGameViewModel.swift */,
 				E835172625051CF600D47300 /* JFAmuseViewModel.swift */,
+				E835173B250A023B00D47300 /* JFFunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -562,7 +568,9 @@
 				E8CF2837250139E3003AD89D /* JFCollectionViewNormalCell.swift in Sources */,
 				E8468B8224F262C700E7105C /* JFPageTitleView.swift in Sources */,
 				E835171D2503F79E00D47300 /* JFGameViewModel.swift in Sources */,
+				E835173A2509FDB400D47300 /* FunnyViewController.swift in Sources */,
 				E8468B8424F262E200E7105C /* JFPageContentView.swift in Sources */,
+				E835173C250A023B00D47300 /* JFFunnyViewModel.swift in Sources */,
 				E83517212503FDB500D47300 /* BaseGameModel.swift in Sources */,
 				E83517182503850200D47300 /* JFCollectionGameCell.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,

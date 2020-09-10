@@ -23,8 +23,11 @@ private let KHeaderViewH:CGFloat = 50
 
 
 
-class BaseAnchorViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class BaseAnchorViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
+    
+    //默认他有值的 下面要用到 baseVM的时候 就会自动解包 如果为空的话
+    // 对空值进行解包的话 会奔溃
     var baseVM:BaseViewModel!
     
      lazy var collectionView:UICollectionView = {

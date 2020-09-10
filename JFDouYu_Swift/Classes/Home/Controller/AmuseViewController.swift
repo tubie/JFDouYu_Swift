@@ -13,7 +13,7 @@ private let kItemW:CGFloat = (kScreenWidth - kItemMargin * 3)/2
 private let kNormalItemH:CGFloat = kItemW * 3 / 4
 private let kTopHeaderViewH:CGFloat = 200
 
-class AmuseViewController: BaseAnchorViewController, UICollectionViewDelegateFlowLayout {
+class AmuseViewController: BaseAnchorViewController {
     
     private lazy var amuseMenuView:JFAmuseMenuView = {
         let  view = JFAmuseMenuView.amuseMenuView()
@@ -37,14 +37,11 @@ class AmuseViewController: BaseAnchorViewController, UICollectionViewDelegateFlo
 //        collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         
         collectionView.contentInset = UIEdgeInsets(top:kTopHeaderViewH , left: 0, bottom: 0, right: 0)
-        
-        
     }
     
     override func loadData() {
            //给父类的 baseVM 赋值
               baseVM = amuseViewModel
-              
            //请求数据
               amuseViewModel.requestAmuseData {
                   self.collectionView.reloadData()
@@ -52,16 +49,13 @@ class AmuseViewController: BaseAnchorViewController, UICollectionViewDelegateFlo
                 var tmpGroups = self.amuseViewModel.anchorGroups
                 tmpGroups.removeFirst()
                 self.amuseMenuView.groups = tmpGroups
-
               }
-        
-
        }
-    
-    //对父类的 cell大小布局 重写
-     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-           return CGSize(width: kItemW, height: kNormalItemH)
-    }
+//
+//    //对父类的 cell大小布局 重写
+//     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+//           return CGSize(width: kItemW, height: kNormalItemH)
+//    }
     
 }
 
