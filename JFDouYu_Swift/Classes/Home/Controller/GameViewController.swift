@@ -16,7 +16,7 @@ private let KHeaderViewH:CGFloat = 50
 private let KHeaderViewID = "KHeaderViewID"
 private let KGameViewH:CGFloat = 90
 
-class GameViewController: UIViewController {
+class GameViewController: BaseViewController {
     
     fileprivate lazy var gameViewModel:JFGameViewModel =  JFGameViewModel()
     
@@ -70,20 +70,23 @@ class GameViewController: UIViewController {
         requestData()
         
     }
-}
-
-extension GameViewController{
-    fileprivate func setupUI(){
+    
+    override func setupUI(){
+        
+        contentView = collectionView
+        
+        super.setupUI()
         view.addSubview(collectionView)
-        
+
         collectionView.addSubview(topHeaderView)
-        
+
         collectionView.addSubview(gameView)
-        
+
         collectionView.contentInset = UIEdgeInsets(top: KHeaderViewH + KGameViewH, left: 0, bottom: 0, right: 0)
         
     }
 }
+
 
 extension GameViewController{
     fileprivate func requestData(){
@@ -104,6 +107,9 @@ extension GameViewController{
 //            let tmp = self.gameViewModel.gameModels[0..<10]
             // 类型ArraySlice 通过 Array来转化
             self.gameView.groups = Array(self.gameViewModel.gameModels[0..<10])
+            
+            //数据请求完成
+            self.loadDataFinished()
         }
     }
 }
@@ -128,12 +134,11 @@ extension GameViewController:UICollectionViewDataSource{
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: KHeaderViewID, for: indexPath) as! JFCollectionHeaderView
 //               let group = recommendVM.anchorGroups[indexPath.section]
 //               headerView.anchorGroup = group
-        
         headerView.titleLabel.text = "全部"
         headerView.iconImageView.image = UIImage(named: "Img_orange")
         headerView.moreBtn.isHidden = true
                
-               return headerView
+        return headerView
         
     }
 }

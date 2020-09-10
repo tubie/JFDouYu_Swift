@@ -63,6 +63,9 @@ class RecommendViewController: BaseAnchorViewController {
            group.tag_name = "更多"
            groups.append(group)
           self.gameView.groups = groups
+            
+            //数据请求完成
+            self.loadDataFinished()
         }
         
         recommendVM.requestCycleData {

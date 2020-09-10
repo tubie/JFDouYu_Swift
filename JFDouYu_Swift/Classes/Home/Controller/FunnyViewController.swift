@@ -21,6 +21,11 @@ class FunnyViewController: BaseAnchorViewController {
 
         funnyVM.loadFunnyData {
             self.collectionView.reloadData()
+            
+            //数据请求完成
+            self.loadDataFinished()
+            
+            
         }
     }
     override func setupUI() {

@@ -23,7 +23,7 @@ private let KHeaderViewH:CGFloat = 50
 
 
 
-class BaseAnchorViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class BaseAnchorViewController: BaseViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     
     
     //默认他有值的 下面要用到 baseVM的时候 就会自动解包 如果为空的话
@@ -77,8 +77,14 @@ class BaseAnchorViewController: UIViewController,UICollectionViewDataSource,UICo
         
     }
     
-    func setupUI(){
+    override func setupUI(){
+        // 给父类的中的内容引用进行赋值
+        
+        contentView = collectionView
+        
         view.addSubview(collectionView)
+
+        super.setupUI()
     }
     
     

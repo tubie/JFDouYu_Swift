@@ -49,6 +49,10 @@ class AmuseViewController: BaseAnchorViewController {
                 var tmpGroups = self.amuseViewModel.anchorGroups
                 tmpGroups.removeFirst()
                 self.amuseMenuView.groups = tmpGroups
+                
+                //数据请求完成
+                self.loadDataFinished()
+                
               }
        }
 //

@@ -32,6 +32,7 @@
 		E83517382509E9C700D47300 /* JFAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */; };
 		E835173A2509FDB400D47300 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517392509FDB300D47300 /* FunnyViewController.swift */; };
 		E835173C250A023B00D47300 /* JFFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835173B250A023B00D47300 /* JFFunnyViewModel.swift */; };
+		E835173E250A0FAE00D47300 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835173D250A0FAE00D47300 /* BaseViewController.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -89,6 +90,7 @@
 		E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		E83517392509FDB300D47300 /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		E835173B250A023B00D47300 /* JFFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFFunnyViewModel.swift; sourceTree = "<group>"; };
+		E835173D250A0FAE00D47300 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				E8468B2924EE9D6600E7105C /* Main.storyboard */,
 				E835172D250660CD00D47300 /* BaseAnchorViewController.swift */,
+				E835173D250A0FAE00D47300 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
 				E835171B2503EE4E00D47300 /* GameViewController.swift in Sources */,
 				E8CF282E24FE8E38003AD89D /* JFRecommendViewModel.swift in Sources */,
+				E835173E250A0FAE00D47300 /* BaseViewController.swift in Sources */,
 				E8468B7E24EFA43E00E7105C /* JFHomeViewController.swift in Sources */,
 				E8CF283F25015CCF003AD89D /* JFNetworkTool.swift in Sources */,
 				E8468B8824F4F3B300E7105C /* UIColor-Extention.swift in Sources */,
