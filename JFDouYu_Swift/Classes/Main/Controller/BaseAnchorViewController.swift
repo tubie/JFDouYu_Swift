@@ -113,5 +113,19 @@ class BaseAnchorViewController: BaseViewController,UICollectionViewDataSource,UI
         headerView.anchorGroup = baseVM.anchorGroups[indexPath.section]
         return headerView
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        anchor.isVertical == 0 ? normalVC() : showModalVC()
+    }
+    
+    private func showModalVC(){
+        present(RoomShowViewController(), animated: true, completion: nil)
+    }
+    
+    private func normalVC(){
+        navigationController?.pushViewController(RoomNormalViewController(), animated: true)
+    }
 }
 

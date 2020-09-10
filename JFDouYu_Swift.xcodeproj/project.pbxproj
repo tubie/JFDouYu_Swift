@@ -33,6 +33,8 @@
 		E835173A2509FDB400D47300 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517392509FDB300D47300 /* FunnyViewController.swift */; };
 		E835173C250A023B00D47300 /* JFFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835173B250A023B00D47300 /* JFFunnyViewModel.swift */; };
 		E835173E250A0FAE00D47300 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835173D250A0FAE00D47300 /* BaseViewController.swift */; };
+		E8351744250A1D3000D47300 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8351743250A1D3000D47300 /* RoomShowViewController.swift */; };
+		E8351746250A1D6D00D47300 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8351745250A1D6D00D47300 /* RoomNormalViewController.swift */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -91,6 +93,8 @@
 		E83517392509FDB300D47300 /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		E835173B250A023B00D47300 /* JFFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFFunnyViewModel.swift; sourceTree = "<group>"; };
 		E835173D250A0FAE00D47300 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E8351743250A1D3000D47300 /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		E8351745250A1D6D00D47300 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,39 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E835173F250A1CEE00D47300 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				E8351742250A1D1C00D47300 /* Controller */,
+				E8351740250A1D1C00D47300 /* Model */,
+				E8351741250A1D1C00D47300 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		E8351740250A1D1C00D47300 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8351741250A1D1C00D47300 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8351742250A1D1C00D47300 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8351743250A1D3000D47300 /* RoomShowViewController.swift */,
+				E8351745250A1D6D00D47300 /* RoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E8468B1724EE9D6600E7105C = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +233,7 @@
 		E8468B4D24EEAD0800E7105C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E835173F250A1CEE00D47300 /* Room */,
 				E8468B4E24EEAD0800E7105C /* Home */,
 				E8468B5224EEAD0800E7105C /* Follow */,
 				E8468B5624EEAD0800E7105C /* Profile */,
@@ -576,6 +614,7 @@
 				E835173C250A023B00D47300 /* JFFunnyViewModel.swift in Sources */,
 				E83517212503FDB500D47300 /* BaseGameModel.swift in Sources */,
 				E83517182503850200D47300 /* JFCollectionGameCell.swift in Sources */,
+				E8351746250A1D6D00D47300 /* RoomNormalViewController.swift in Sources */,
 				E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */,
 				E835171B2503EE4E00D47300 /* GameViewController.swift in Sources */,
 				E8CF282E24FE8E38003AD89D /* JFRecommendViewModel.swift in Sources */,
@@ -604,6 +643,7 @@
 				E8CF283024FFD937003AD89D /* RecommendViewController.swift in Sources */,
 				E8CF2845250224FE003AD89D /* AnchorModel.swift in Sources */,
 				E835170D2503667C00D47300 /* JFCycleModel.swift in Sources */,
+				E8351744250A1D3000D47300 /* RoomShowViewController.swift in Sources */,
 				E8CF28332501318E003AD89D /* JFCollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
