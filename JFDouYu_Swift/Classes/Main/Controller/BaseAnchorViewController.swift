@@ -70,7 +70,9 @@ class BaseAnchorViewController: UIViewController,UICollectionViewDataSource,UICo
 
     }
     
-    func loadData(){}
+    func loadData(){
+        
+    }
     
     func setupUI(){
         view.addSubview(collectionView)

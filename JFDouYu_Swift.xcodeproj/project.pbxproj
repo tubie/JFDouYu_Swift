@@ -26,6 +26,10 @@
 		E835172725051CF600D47300 /* JFAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835172625051CF600D47300 /* JFAmuseViewModel.swift */; };
 		E835172A250522A300D47300 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8351729250522A300D47300 /* BaseViewModel.swift */; };
 		E835172E250660CD00D47300 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835172D250660CD00D47300 /* BaseAnchorViewController.swift */; };
+		E835173225090D8700D47300 /* JFAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835173125090D8700D47300 /* JFAmuseMenuView.swift */; };
+		E835173425090D9B00D47300 /* JFAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835173325090D9B00D47300 /* JFAmuseMenuView.xib */; };
+		E83517372509E9C700D47300 /* JFAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83517352509E9C700D47300 /* JFAmuseMenuViewCell.swift */; };
+		E83517382509E9C700D47300 /* JFAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */; };
 		E8468B2424EE9D6600E7105C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2324EE9D6600E7105C /* AppDelegate.swift */; };
 		E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2524EE9D6600E7105C /* SceneDelegate.swift */; };
 		E8468B2824EE9D6600E7105C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8468B2724EE9D6600E7105C /* ViewController.swift */; };
@@ -77,6 +81,10 @@
 		E835172625051CF600D47300 /* JFAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAmuseViewModel.swift; sourceTree = "<group>"; };
 		E8351729250522A300D47300 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E835172D250660CD00D47300 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
+		E835173125090D8700D47300 /* JFAmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAmuseMenuView.swift; sourceTree = "<group>"; };
+		E835173325090D9B00D47300 /* JFAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFAmuseMenuView.xib; sourceTree = "<group>"; };
+		E83517352509E9C700D47300 /* JFAmuseMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFAmuseMenuViewCell.swift; sourceTree = "<group>"; };
+		E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JFAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		E8468B2024EE9D6600E7105C /* JFDouYu_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JFDouYu_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8468B2324EE9D6600E7105C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8468B2524EE9D6600E7105C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +245,10 @@
 				E83517142503840F00D47300 /* JFRecommendGameView.xib */,
 				E83517162503850200D47300 /* JFCollectionGameCell.swift */,
 				E83517172503850200D47300 /* JFCollectionGameCell.xib */,
+				E835173125090D8700D47300 /* JFAmuseMenuView.swift */,
+				E835173325090D9B00D47300 /* JFAmuseMenuView.xib */,
+				E83517352509E9C700D47300 /* JFAmuseMenuViewCell.swift */,
+				E83517362509E9C700D47300 /* JFAmuseMenuViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,8 +494,10 @@
 				E8CF283C25014F34003AD89D /* JFCollectionViewPrettyCell.xib in Resources */,
 				E8468B3024EE9D7000E7105C /* LaunchScreen.storyboard in Resources */,
 				E8468B2D24EE9D7000E7105C /* Assets.xcassets in Resources */,
+				E83517382509E9C700D47300 /* JFAmuseMenuViewCell.xib in Resources */,
 				E8CF2838250139E3003AD89D /* JFCollectionViewNormalCell.xib in Resources */,
 				E83517152503840F00D47300 /* JFRecommendGameView.xib in Resources */,
+				E835173425090D9B00D47300 /* JFAmuseMenuView.xib in Resources */,
 				E83517192503850200D47300 /* JFCollectionGameCell.xib in Resources */,
 				E8468B2B24EE9D6600E7105C /* Main.storyboard in Resources */,
 				E8CF28342501318E003AD89D /* JFCollectionHeaderView.xib in Resources */,
@@ -564,11 +578,13 @@
 				E835172725051CF600D47300 /* JFAmuseViewModel.swift in Sources */,
 				E8CF284325021DB6003AD89D /* AnchorGroup.swift in Sources */,
 				E835170725028CA000D47300 /* JFCollectionViewBaseCell.swift in Sources */,
+				E835173225090D8700D47300 /* JFAmuseMenuView.swift in Sources */,
 				E8468B2624EE9D6600E7105C /* SceneDelegate.swift in Sources */,
 				E8468B8024EFA5E800E7105C /* UIBarButtonItem-Extention.swift in Sources */,
 				E8CF284125016AAE003AD89D /* NSDate-Extention.swift in Sources */,
 				E835171F2503FB5300D47300 /* JFGameModel.swift in Sources */,
 				E83517092503444000D47300 /* JFRecommendCycleView.swift in Sources */,
+				E83517372509E9C700D47300 /* JFAmuseMenuViewCell.swift in Sources */,
 				E835171025036C2800D47300 /* JFCollectionViewCycleCell.swift in Sources */,
 				E8CF283B25014F34003AD89D /* JFCollectionViewPrettyCell.swift in Sources */,
 				E83517132503840100D47300 /* JFRecommendGameView.swift in Sources */,
