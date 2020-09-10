@@ -12,7 +12,13 @@ private let JFGameCellID = "JFGameCellID"
 
 
 class JFAmuseMenuViewCell: UICollectionViewCell {
-
+    
+    var groups:[AnchorGroup]?{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -35,12 +41,14 @@ class JFAmuseMenuViewCell: UICollectionViewCell {
 
 extension JFAmuseMenuViewCell : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+        return groups?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JFGameCellID, for: indexPath) as! JFCollectionGameCell
-        cell.backgroundColor = UIColor.randomColor()
+        //超出部分不展示
+        cell.clipsToBounds = true
+        cell.baseGame = groups![indexPath.item]
         return cell
     }
 }

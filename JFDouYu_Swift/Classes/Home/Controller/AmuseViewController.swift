@@ -38,6 +38,7 @@ class AmuseViewController: BaseAnchorViewController, UICollectionViewDelegateFlo
         
         collectionView.contentInset = UIEdgeInsets(top:kTopHeaderViewH , left: 0, bottom: 0, right: 0)
         
+        
     }
     
     override func loadData() {
@@ -47,7 +48,14 @@ class AmuseViewController: BaseAnchorViewController, UICollectionViewDelegateFlo
            //请求数据
               amuseViewModel.requestAmuseData {
                   self.collectionView.reloadData()
+                
+                var tmpGroups = self.amuseViewModel.anchorGroups
+                tmpGroups.removeFirst()
+                self.amuseMenuView.groups = tmpGroups
+
               }
+        
+
        }
     
     //对父类的 cell大小布局 重写
